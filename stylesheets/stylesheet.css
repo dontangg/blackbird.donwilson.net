@@ -69,7 +69,7 @@ header {
 }
 
 header h1 {
-  font-family: 'Chivo', 'Helvetica Neue', Helvetica, Arial, serif; font-weight: 900;
+  font-family: 'Bubblegum Sans', 'Helvetica Neue', Helvetica, Arial, serif; font-weight: 900;
   letter-spacing: -1px;
   font-size: 48px;
   color: #303030;
@@ -117,7 +117,7 @@ a.button {
   padding: 12px 8px 12px 8px;
   display: block;
   float: left;
-  width: 179px;
+  width: 220px;
   margin-right: 14px;  
   background: #fdfdfd; /* Old browsers */
   background: -moz-linear-gradient(top,  #fdfdfd 0%, #f2f2f2 100%); /* FF3.6+ */
@@ -152,6 +152,10 @@ a.button span {
   height: 23px;
 }
 
+#give-feedback span {
+  background: transparent url(../images/uservoice-icon.png) 12px 50% no-repeat;
+}
+
 #download-zip span {
   background: transparent url(../images/zip-icon.png) 12px 50% no-repeat;
 }
@@ -163,6 +167,15 @@ a.button span {
 }
 #view-on-github {
   margin-right: 0;
+}
+
+#app-store-link {
+  display: block;
+  float: right;
+  height: 50px;
+  width: 146px;
+  background: transparent url(../images/app-store-badge-50.png) no-repeat;
+  text-indent: -9999px;
 }
 
 code, pre {
