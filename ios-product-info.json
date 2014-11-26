@@ -1,0 +1,9 @@
+{
+  "productIds": [ "net.donwilson.blackbird.christmastheme1" ],
+  "marketing": {
+    "net.donwilson.blackbird.christmastheme1": {
+      "icon": "Icon",
+      "images": [ "AllContent", "InGame" ]
+    }
+  }
+}
