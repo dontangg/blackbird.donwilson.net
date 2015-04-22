@@ -7,7 +7,7 @@
     },
     "net.donwilson.blackbird.independencedaytheme": {
       "icon": "Icon",
-      "images": [ "AllContent" ]
+      "images": [ "AllContent", "InGame" ]
     }
   }
 }
