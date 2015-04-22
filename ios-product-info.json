@@ -1,7 +1,11 @@
 {
-  "productIds": [ "net.donwilson.blackbird.christmastheme1" ],
+  "productIds": [ "net.donwilson.blackbird.christmastheme1", "net.donwilson.blackbird.independencedaytheme" ],
   "marketing": {
     "net.donwilson.blackbird.christmastheme1": {
+      "icon": "Icon",
+      "images": [ "AllContent", "InGame" ]
+    },
+    "net.donwilson.blackbird.independencedaytheme": {
       "icon": "Icon",
       "images": [ "AllContent", "InGame" ]
     }
