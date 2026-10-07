@@ -126,6 +126,12 @@ h3 { font-size: 1.45rem; }
 .points { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 0; padding: 0; list-style: none; }
 .points li { background: #fff; border: 1px solid var(--panel-edge); border-radius: 8px; padding: 4px 10px; font-size: 0.95rem; }
 
+/* Questions */
+
+.faq h3 { color: var(--accent-dark); margin-top: 1.1em; }
+.faq h2 + h3 { margin-top: 0.3em; }
+.faq p { margin: 0; }
+
 /* Call to action */
 
 .cta { text-align: center; }
