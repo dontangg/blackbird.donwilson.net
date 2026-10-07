@@ -1,0 +1,152 @@
+/* Blackbird! website. The look follows the app: Bubblegum Sans on a wood table,
+   with content on cream panels. */
+
+@font-face {
+  font-family: "Bubblegum Sans";
+  src: url("fonts/BubblegumSans-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+:root {
+  --ink: #2f2114;
+  --ink-soft: #5a4632;
+  --panel: #fbf6ec;
+  --panel-edge: #e6d8bf;
+  --accent: #8a4b14;
+  --accent-dark: #6b3a0f;
+  --wood-fallback: #b7834f;
+  --radius: 14px;
+  --shadow: 0 6px 24px rgba(47, 33, 20, 0.25);
+  --display: "Bubblegum Sans", "Marker Felt", "Trebuchet MS", sans-serif;
+  --body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 17px;
+  line-height: 1.55;
+  background: var(--wood-fallback) url("images/wood.jpg") center top / cover fixed;
+}
+
+/* iOS Safari ignores fixed backgrounds and stretches them instead */
+@supports (-webkit-touch-callout: none) {
+  body { background-attachment: scroll; background-size: 1400px auto; background-repeat: repeat; }
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: var(--accent); }
+a:hover { color: var(--accent-dark); }
+
+h1, h2, h3 { font-family: var(--display); font-weight: normal; line-height: 1.15; margin: 0 0 0.4em; }
+h1 { font-size: clamp(2.6rem, 8vw, 4rem); }
+h2 { font-size: clamp(1.8rem, 5vw, 2.4rem); }
+h3 { font-size: 1.45rem; }
+
+/* Only side padding here, so sections can set their own top and bottom */
+.wrap { max-width: 1040px; margin: 0 auto; padding-left: 16px; padding-right: 16px; }
+
+/* Hero */
+
+.hero { padding-top: 48px; padding-bottom: 32px; text-align: center; }
+.hero .icon {
+  width: 112px; height: 112px; margin: 0 auto 16px;
+  border-radius: 24px; box-shadow: var(--shadow);
+}
+.hero h1 { color: #fff; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.45); margin-bottom: 0.15em; }
+.hero .tagline {
+  font-family: var(--display);
+  font-size: clamp(1.25rem, 3.5vw, 1.6rem);
+  color: #fff; text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  margin: 0 auto 20px; max-width: 34em;
+}
+.badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 16px; }
+.badge { display: inline-block; }
+.badge img { height: 60px; width: auto; }
+.facts {
+  display: inline-block; margin: 18px 0 0; padding: 6px 14px;
+  background: rgba(47, 33, 20, 0.55); color: #fff; border-radius: 999px; font-size: 0.95rem;
+}
+.facts .stars { color: #ffd166; letter-spacing: 1px; }
+
+/* Panels */
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--panel-edge);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px clamp(18px, 4vw, 40px);
+  margin: 0 0 28px;
+}
+.panel > p:first-of-type { margin-top: 0; }
+.lead { font-size: 1.1rem; }
+
+/* Screenshots */
+
+.shots {
+  display: grid; grid-auto-flow: column; grid-auto-columns: min(86%, 640px);
+  gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory;
+  padding: 4px 4px 14px; margin: 0 -4px;
+  -webkit-overflow-scrolling: touch;
+}
+.shots figure { margin: 0; scroll-snap-align: start; }
+.shots img { border-radius: 12px; box-shadow: 0 3px 12px rgba(47, 33, 20, 0.3); aspect-ratio: 16 / 9; object-fit: cover; width: 100%; }
+.shots figcaption { font-size: 0.95rem; color: var(--ink-soft); margin-top: 8px; text-align: center; }
+.hint { font-size: 0.9rem; color: var(--ink-soft); text-align: center; margin: 4px 0 0; }
+
+/* Features */
+
+.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px 28px; margin-top: 8px; }
+.feature .avail {
+  margin-top: 8px; font-size: 0.85rem; font-weight: 600; color: var(--accent-dark);
+  display: flex; gap: 6px; align-items: baseline;
+}
+.feature .avail::before { content: "★"; color: var(--accent); }
+.feature h3 { margin-bottom: 0.25em; color: var(--accent-dark); }
+.feature p { margin: 0; }
+.feature ul { margin: 0.4em 0 0; padding-left: 1.2em; }
+
+/* How to play */
+
+.steps { counter-reset: step; list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; }
+.steps li { counter-increment: step; position: relative; padding-left: 52px; min-height: 38px; }
+.steps li::before {
+  content: counter(step); position: absolute; left: 0; top: -2px;
+  width: 38px; height: 38px; border-radius: 50%;
+  background: var(--accent); color: #fff; font-family: var(--display); font-size: 1.35rem;
+  display: flex; align-items: center; justify-content: center;
+}
+.points { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 0; padding: 0; list-style: none; }
+.points li { background: #fff; border: 1px solid var(--panel-edge); border-radius: 8px; padding: 4px 10px; font-size: 0.95rem; }
+
+/* Call to action */
+
+.cta { text-align: center; }
+.cta p { margin: 0 0 16px; }
+
+/* Long-form pages (privacy) */
+
+.doc h2 { margin-top: 1.2em; font-size: 1.7rem; }
+.doc h2:first-of-type { margin-top: 0.3em; }
+.doc .updated { color: var(--ink-soft); font-style: italic; }
+.back { display: inline-block; margin: 28px 0 16px; color: #fff; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); font-family: var(--display); font-size: 1.3rem; text-decoration: none; }
+.back:hover { color: #fff; text-decoration: underline; }
+
+/* Footer */
+
+footer {
+  color: #fff; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  text-align: center; font-size: 0.95rem; padding-top: 8px;
+  padding-bottom: calc(48px + env(safe-area-inset-bottom));
+}
+footer a { color: #fff; }
+footer a:hover { color: #ffe9c7; }
+footer nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 22px; margin-bottom: 12px; font-size: 1.05rem; }
+footer .fine { font-size: 0.85rem; opacity: 0.9; max-width: 44em; margin: 8px auto 0; }
