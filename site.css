@@ -104,11 +104,6 @@ h3 { font-size: 1.45rem; }
 /* Features */
 
 .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px 28px; margin-top: 8px; }
-.feature .avail {
-  margin-top: 8px; font-size: 0.85rem; font-weight: 600; color: var(--accent-dark);
-  display: flex; gap: 6px; align-items: baseline;
-}
-.feature .avail::before { content: "★"; color: var(--accent); }
 .feature h3 { margin-bottom: 0.25em; color: var(--accent-dark); }
 .feature p { margin: 0; }
 .feature ul { margin: 0.4em 0 0; padding-left: 1.2em; }
