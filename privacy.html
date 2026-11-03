@@ -35,7 +35,7 @@
         <li>the app version and platform that last synced, and an identifier for each installation of the app that sent credits;</li>
         <li>if you choose Sign in with Google, your Google identifier, email address, name and a link to your Google profile photo (see Restoring your account).</li>
       </ul>
-      <p>To make sure requests come from the real app, Firebase App Check asks Apple to confirm that the app on your device is genuine (App Attest). It doesn't identify you.</p>
+      <p>To make sure requests come from the real app, Firebase App Check asks Apple (App Attest, on iPhone and iPad) or Google (Play Integrity, on Android) to confirm that the app on your device is genuine. It doesn't identify you.</p>
       <p>The account is stored in Google Cloud data centers in the United States, wherever you live. It's used only to keep your credits and theme packs, never for advertising, and it isn't connected to the usage data below.</p>
       <p>If you're in the European Economic Area or the United Kingdom, your account is processed because it's needed to provide the credits and theme packs you use in the app. You can ask for a copy of it, or to have it corrected or deleted, as described below.</p>
 
@@ -46,8 +46,8 @@
       <h2>Usage and crash data</h2>
       <p>The app uses two Google Firebase services to help me find bugs and understand how the game is played:</p>
       <ul>
-        <li><strong>Firebase Analytics</strong> records game events, such as a round or game finishing, the score, the rules in use and the difficulty level chosen, and, with credits, the credits earned and spent, abilities used, theme packs viewed and unlocked and a rough balance (such as 10-29). Along with them, it records your device model, iOS version, app version, an app-specific identifier, and your general region, which Google works out from your internet address.</li>
-        <li><strong>Firebase Crashlytics</strong> sends a report when the app crashes. The report includes what the app was doing, the rules in use, your device model and iOS version, and an identifier for this installation of the app.</li>
+        <li><strong>Firebase Analytics</strong> records game events, such as a round or game finishing, the score, the rules in use and the difficulty level chosen, and, with credits, the credits earned and spent, abilities used, theme packs viewed and unlocked and a rough balance (such as 10-29). Along with them, it records your device model, its iOS or Android version, the app version, an app-specific identifier, and your general region, which Google works out from your internet address.</li>
+        <li><strong>Firebase Crashlytics</strong> sends a report when the app crashes. The report includes what the app was doing, the rules in use, your device model and its iOS or Android version, and an identifier for this installation of the app.</li>
       </ul>
       <p>None of this includes your name, email address, contacts or precise location. The app is built without access to your device's advertising identifier, and this data isn't used for advertising. Google processes it under the <a href="https://firebase.google.com/support/privacy">Firebase privacy terms</a>.</p>
 
